@@ -2,7 +2,7 @@
 void setup()
 {
 	size(800,600);
-	background(0);
+	background(5,0,100);
 	noLoop();
 }
 
@@ -13,8 +13,8 @@ void draw()
     for(int x = 75; x<=500; x+=70)
     	{
     		Die bao = new Die(x,y,45);
-			bao.roll();
 			bao.show();
+			bao.roll();
 		}
 	}
 }
@@ -39,24 +39,32 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		if((int)(Math.random()*2)< 1)
+		if((int)(Math.random()*7)<= 1)
 		{
 			System.out.println("1");
-			fill(255);
-			ellipse(myX + 25, myY + 23, 5, 5);
+			fill(0);
+			ellipse(myX + 22, myY + 22, 5, 5);
 		}
-		else if((int)(Math.random()*2)> 1)
+		else if((int)(Math.random()*7)<= 2)
 		{
 			System.out.println("2");
-			fill(255);
-			ellipse(myX + 25, myY + 23, 5, 5);
+			fill(0);
+			ellipse(myX + 15, myY + 15, 5, 5);
+			ellipse(myX + 30, myY + 30, 5, 5);
 		}
-		//else if(Math.random)
+		else if((int)(Math.random()*7)<=3)
+		{
+			System.out.println("2");
+			fill(0);
+			ellipse(myX + 15, myY + 15, 5, 5);
+			ellipse(myX + 23, myY + 23, 5, 5);
+			ellipse(myX + 30, myY + 30, 5, 5);
+		}
 	}
 	void show()
 	{
 		noStroke();
-		fill(255,0,0);
+		fill(255);
 		rect(myX, myY,myWidth,45,7);
 		//fill(255);
 		//display total sum of dice
