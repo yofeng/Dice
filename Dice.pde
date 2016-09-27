@@ -8,7 +8,6 @@ void setup()
 	size(800,600);
 	background(5,0,100);
 	noLoop();
-
 }
 //int progress = 0;
 void draw()
@@ -23,7 +22,6 @@ void draw()
 			//bao.progress();
 		}
 	}
-	System.out.println(score);
 	//int bar;
 	//bar = score;
 	//rect(50,550,bar/5,10);
@@ -40,9 +38,9 @@ void draw()
 
 void mousePressed()
 {
+	score = 0;
 	background(5,0,100);
 	redraw();
-	score = 0;
 }
 class Die //models one single dice cube
 {
@@ -138,7 +136,7 @@ class Die //models one single dice cube
 	void show()
 	{
 		fill(5,0,100);
-		rect(600,100,100,250);
+		rect(600,100,100,350);
 		textSize(38);
 		fill(r,g,b);
 		text(score, 600, 210);
