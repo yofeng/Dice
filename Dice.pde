@@ -2,7 +2,6 @@
 int score = 0;
 //int displayScore =0;
 
-
 void setup()
 {
 	size(800,600);
@@ -136,7 +135,7 @@ class Die //models one single dice cube
 	void show()
 	{
 		fill(5,0,100);
-		rect(600,100,100,350);
+		rect(600,100,200,150);
 		textSize(38);
 		fill(r,g,b);
 		text(score, 600, 210);
