@@ -138,7 +138,7 @@ class Die //models one single dice cube
 	void show()
 	{
 		fill(5,0,100);
-		rect(600,100,100,150);
+		rect(600,100,100,250);
 		textSize(38);
 		fill(r,g,b);
 		text(score, 600, 210);
